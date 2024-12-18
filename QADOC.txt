@@ -1,0 +1,54 @@
+//input[@name='my-disabled'] 
+  public static void main(String args [])
+{
+ChromeDriver c1 =new ChromeDriver();
+c1.get("https://d3pv22lioo8876.cloudfront.net/tiptop/");
+WebElement a= c1.findelement(By.xpath("//input[@name='my-disabled']"))
+boolean element =a.isEnabled();
+System.out.println("Verify that the text input element "+element);
+
+WedElement a1= c1.findElement(By.xpath("//input[@value='Readonly input']"))
+Assert.assertTrue(a1.getAttribute("readOnly").equals("true"),"Element ReadOnly")
+
+WebElement dd=driver.findElement(By.xpath("//select[@name='my-select']"));
+Select sel=new Select(dd);
+int count_of_options=sel.getOptions().size();
+System.out.println("The total no. of selectable options in the dropdown menu are ="+count_of_options);
+assertEquals(count_of_options, expectedTitle, "Page title does not match the expected value");
+
+WebElement inputBox = driver.findElement(By.xpath("//button[@type="name"]"));
+WebElement submitbutton=drover.findElement(By.xpath("//button[@type="submit"]"))
+String textInsideInputBox = inputBox.getAttribute("value");
+if(textInsideInputBox.isEmpty())
+{
+   if(submitbutton.isEnabled())
+System.out.println("Submit button is enabled");
+}
+}
+
+
+WebElement inputBox = driver.findElement(By.xpath("//button[@type="name"]"));
+WebElement inputBox1 = driver.findElement(By.xpath("//button[@type="password"]"));
+WebElement submitbutton=drover.findElement(By.xpath("//button[@type="submit"]"))
+String textInsideInputBox = inputBox.getAttribute("value");
+String textInsideInputBox1 = inputBox1.getAttribute("value");
+if(textInsideInputBox.isEmpty() && (textInsideInputBox1.isEmpty()
+{
+   if(submitbutton.isEnabled())
+System.out.println("Submit button is enabled");
+}
+}
+
+
+String bodyText = driver.findElement(By.tagName("p")).getText();
+Assert.assertTrue("Received", bodyText.contains(text));
+
+
+ChromeDriver c1 =new ChromeDriver();
+WebElement submitbutton=drover.findElement(By.xpath("//button[@type="submit"]"))
+String url=a1.getCurrentURL();
+url.contains("name"));
+url.contains("password"));
+url.contains("readonly"));
+url.contains("my-select"));
+
